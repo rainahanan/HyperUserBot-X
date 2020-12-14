@@ -6,10 +6,11 @@ import requests
 
 from ..utils import admin_cmd
 
+from . import TMP_DOWNLOAD_DIRECTORY
 
 @borg.on(admin_cmd(pattern=r"boobs"))
 async def boobs(event):
-    pic_loc = os.path.join(Var.TMP_DOWNLOAD_DIRECTORY, "bobs.jpg")
+    pic_loc = os.path.join(TMP_DOWNLOAD_DIRECTORY, "bobs.jpg")
     a = await event.edit("`Finding some big bobs 🧐...`")
     await asyncio.sleep(0.5)
     await a.edit("`Sending some big bobs 🌚...`")
@@ -23,7 +24,7 @@ async def boobs(event):
 
 @borg.on(admin_cmd(pattern=r"butts"))
 async def butts(event):
-    pic_loc = os.path.join(Var.TEMP_DOWNLOAD_DIRECTORY, "butts.jpg")
+    pic_loc = os.path.join(TMP_DOWNLOAD_DIRECTORY, "butts.jpg")
     a = await event.edit("`Finding some beautiful butts 🧐...`")
     await asyncio.sleep(0.5)
     await a.edit("`Sending some beautiful butts 🌚...`")
