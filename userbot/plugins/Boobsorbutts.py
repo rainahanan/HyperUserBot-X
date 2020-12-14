@@ -6,7 +6,6 @@ import requests
 
 from ..utils import admin_cmd
 
-from . import TMP_DOWNLOAD_DIRECTORY
 
 @borg.on(admin_cmd(pattern=r"boobs"))
 async def boobs(event):
