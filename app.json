@@ -1,7 +1,7 @@
 {
-  "name": "HYPER-X",
-  "description": "A Userbot developed by ㄒ乇卂爪  卄ㄚ卩乇尺-乂 and maintained by #TEAM_HYPER-X ",
-  "logo": "https://telegra.ph/file/c9525dc4a553a32ef166e.jpg",
+  "name": "HyperUserBot-X",
+  "description": "A Userbot developed by TEAM  HyperUserBot-X and maintained by #TEAM_HyperUserBot-X ",
+  "logo": "https://telegra.ph/file/c92b6368929e1e44112d5.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/sameerpanthi/HYPER-X",
+  "repository": "https://github.com/ahirearyan2/HyperUserBot-X",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
