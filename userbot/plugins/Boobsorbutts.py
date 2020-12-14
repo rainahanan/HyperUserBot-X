@@ -1,6 +1,3 @@
-# Ported from userge by @sameer_705
-# Ported to SAVAGE userbot from DC userbot by @sameer_705
-
 import asyncio
 import os
 import urllib
