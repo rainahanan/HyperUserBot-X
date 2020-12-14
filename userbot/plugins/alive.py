@@ -9,9 +9,10 @@ from . import ALIVE_NAME, CMD_HELP, StartTime, catdef, catversion, mention, repl
 """ =======================CONFIGS====================== """
 DEFAULTUSER = ALIVE_NAME or "cat"
 CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ HyperUserBot-X IS RUNNING SUCCESFULLY ✮"
+CUSTOM_ALIVE_TEXT = (
+    Config.CUSTOM_ALIVE_TEXT or "✮ HyperUserBot-X IS RUNNING SUCCESFULLY ✮"
+)
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  ✥ "
-
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
@@ -40,18 +41,18 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
-        f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-        f"**{EMOJI} SYSTEMS STATS**\n"
-        f"**{EMOJI} Telethon Version:** `{version.__version__}` \n"
-        f"**{EMOJI} Python:** `{python_version()}` \n"
-        f"**{EMOJI} Status:**  `{check_sgnirts}`\n"
-        f"**{EMOJI} Version** : `{catversion}`\n"
-        f"**{EMOJI} My Master** : {mention} \n"
-        f"**{EMOJI} Uptime :** `{uptime}\n`"
-        "[✨REPO✨](https://github.com/ahirearyan2/HyperUserBot-X) 🔹 [📜License📜](https://github.com/ahirearyan2/HyperUserBot-X/blob/master/LICENSE)"
+            f"**{CUSTOM_ALIVE_TEXT}**\n\n"
+            f"**{EMOJI} SYSTEMS STATS**\n"
+            f"**{EMOJI} Telethon Version:** `{version.__version__}` \n"
+            f"**{EMOJI} Python:** `{python_version()}` \n"
+            f"**{EMOJI} Status:**  `{check_sgnirts}`\n"
+            f"**{EMOJI} Version** : `{catversion}`\n"
+            f"**{EMOJI} My Master** : {mention} \n"
+            f"**{EMOJI} Uptime :** `{uptime}\n`"
+            "[✨REPO✨](https://github.com/ahirearyan2/HyperUserBot-X) 🔹 [📜License📜](https://github.com/ahirearyan2/HyperUserBot-X/blob/master/LICENSE)",
         )
-       
-        
+
+
 @bot.on(admin_cmd(outgoing=True, pattern="ialive$"))
 @bot.on(sudo_cmd(pattern="ialive$", allow_sudo=True))
 async def amireallyalive(alive):

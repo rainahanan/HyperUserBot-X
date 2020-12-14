@@ -12,7 +12,8 @@ class Config((object)):
     ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
     # For Alive Pic
     ALIVE_PIC = os.environ.get(
-            "ALIVE_PIC", "https://telegra.ph/file/c92b6368929e1e44112d5.jpg")
+        "ALIVE_PIC", "https://telegra.ph/file/c92b6368929e1e44112d5.jpg"
+    )
     # For customizing there alive message
     CUSTOM_ALIVE_TEXT = os.environ.get("CUSTOM_ALIVE_TEXT", None)
     CUSTOM_ALIVE_EMOJI = os.environ.get("CUSTOM_ALIVE_EMOJI", None)
