@@ -1,11 +1,11 @@
-import random, re
-from ..utils import admin_cmd
 import asyncio
-from telethon import events
+
+from ..utils import admin_cmd
+
 
 @borg.on(admin_cmd(pattern="tapatap ?(.*)"))
 async def _(event):
-     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
+    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
 
         await event.edit("Nipple 😋 se Tapak Raha Hai Pasina😥")
         await asyncio.sleep(2)
@@ -17,4 +17,6 @@ async def _(event):
         await asyncio.sleep(2)
         await event.edit("Itni garmi me😰 \n Koi Kaise Thoke Hasina😵")
         await asyncio.sleep(3.5)
-        await event.edit("Nipple Se Tapak Raha Hai Pasina💦 \nNipple Se Tapak Raha Hai Pasina💦 \nBhigi Hui Gaand🤭 Aur Lathpath Seena😐 \nAab Tumhi Batao bhai🙄 \nItni Garmi Mein😰 Koi Kaise Thoke😵 Hasina😋")
+        await event.edit(
+            "Nipple Se Tapak Raha Hai Pasina💦 \nNipple Se Tapak Raha Hai Pasina💦 \nBhigi Hui Gaand🤭 Aur Lathpath Seena😐 \nAab Tumhi Batao bhai🙄 \nItni Garmi Mein😰 Koi Kaise Thoke😵 Hasina😋"
+        )
