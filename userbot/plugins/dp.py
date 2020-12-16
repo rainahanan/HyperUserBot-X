@@ -1,6 +1,6 @@
 import asyncio
 
-from userbot import ALIVE_NAME
+from . import ALIVE_NAME
 
 from ..utils import admin_cmd
 
