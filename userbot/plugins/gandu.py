@@ -1,6 +1,5 @@
-import asyncio
-from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
+
 from ..utils import admin_cmd
 
 
