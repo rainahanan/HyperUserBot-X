@@ -12,8 +12,7 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-from ..utils import catversion
-from . import ALIVE_NAME
+from . import ALIVE_NAME, catversion
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = "https://telegra.ph/file/22535f8051a58af113586.jpg"
