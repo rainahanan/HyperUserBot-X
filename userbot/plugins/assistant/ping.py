@@ -15,7 +15,7 @@
 import time
 from datetime import datetime
 
-from userbotbot import Lastupdate
+from . import Lastupdate
 
 
 def get_readable_time(seconds: int) -> str:
