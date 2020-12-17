@@ -52,13 +52,12 @@ if Config.ENABLE_ASSISTANTBOT == "ENABLE":
             path1 = Path(f.name)
             shortname = path1.stem
             start_assistant(shortname.replace(".py", ""))
-    LOGS.info("Friday And Assistant Bot Have Been Installed Successfully !")
- else:
-    LOGS.info("Yay your userbot is officially working.!!!")
-LOGS.info(
-    "Dhanyawad, ab .alive kar to toh pata chale ki bot zinda hai yaa mar gaya.\n"
-    "If you need help, join http://t.me//HyperUserBotXSupport"
-)
+        LOGS.info("Friday And Assistant Bot Have Been Installed Successfully !")
+    else:
+        LOGS.info("Yay your userbot is officially working.!!!")
+        LOGS.info("Dhanyawad, ab .alive kar to toh pata chale ki bot zinda hai yaa mar gaya.\n"
+        "If you need help, join http://t.me//HyperUserBotXSupport")
+
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
