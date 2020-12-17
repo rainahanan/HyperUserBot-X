@@ -43,6 +43,7 @@ RUN apt-get install -y\
     recoverjpeg \
     zip \
     megatools \
+    p7zip \
     libfreetype6-dev \
     procps \
     policykit-1
