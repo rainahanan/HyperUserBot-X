@@ -1,4 +1,4 @@
-git+https://github.com/LonamiWebs/Telethon.git
+telethon==1.17
 aiofiles
 aiohttp
 asyncurban
@@ -22,7 +22,8 @@ glitch_this
 google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
-googletrans==3.1.0a0
+google_trans_new
+googletrans
 gsearch
 gtts
 hachoir
