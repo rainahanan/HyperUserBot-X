@@ -12,7 +12,7 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-from ..plugins import currentversion
+from ..utils import catversion
 from . import ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
@@ -23,7 +23,7 @@ hubx_caption += "➥ **Telethon Version:** `1.15.0` \n"
 hubx_caption += "➥ **Python:** `3.7.4` \n"
 hubx_caption += "➥ **Database Status:**  `Functional`\n"
 hubx_caption += "➥ **Current Branch** : `main`\n"
-hubx_caption += f"➥ **Version** : `{currentversion}`\n"
+hubx_caption += f"➥ **Version** : `{catversion}`\n"
 hubx_caption += f"➥ **My Boss** : {DEFAULTUSER} \n"
 hubx_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
 hubx_caption += "➥ **License** : [GNU General Public License v3.0](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n"
