@@ -30,5 +30,5 @@ hubx_caption += "➥ **License** : [GNU General Public License v3.0](github.com/
 # only Owner Can Use it
 @assistant_cmd("alive", is_args=False)
 @peru_only
-async def friday(event):
+async def cat(event):
     await tgbot.send_file(event.chat_id, PM_IMG, caption=hubx_caption)
