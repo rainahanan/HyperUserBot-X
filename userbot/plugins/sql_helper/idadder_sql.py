@@ -14,7 +14,7 @@
 
 from sqlalchemy import Column, String
 
-from . import BASE, SESSION
+from userbot.plugins.sql_helper import BASE, SESSION
 
 
 class Moidata(BASE):
