@@ -8,7 +8,7 @@ from userbot.plugins.sql_helper.snips_sql import (
     remove_snip,
 )
 
-from .Config import Config
+from userbot.Config import Config
 
 TYPE_TEXT = 0
 TYPE_PHOTO = 1
