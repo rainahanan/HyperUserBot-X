@@ -31,8 +31,8 @@ from userbot.plugins.sql_helper.idadder_sql import (
     get_all_users,
 )
 
-from . import bot
-from .Config import Config
+from userbot import bot
+from userbot.Config import Config
 
 
 @assistant_cmd("start", is_args=False)
