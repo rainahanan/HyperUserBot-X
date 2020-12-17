@@ -23,6 +23,7 @@ google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
 google_trans_new
+googletrans
 gsearch
 gtts
 hachoir
