@@ -585,7 +585,7 @@ def command(**args):
 #ASSISTANT_BOT
 #THNX MIDHUN SAAR A.K.A MR.STARK SAAR
 
-     def assistant_cmd(add_cmd, is_args=False):
+def assistant_cmd(add_cmd, is_args=False):
     def cmd(func):
         serena = bot.tgbot
         if is_args:
