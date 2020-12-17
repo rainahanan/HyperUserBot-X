@@ -13,7 +13,6 @@
 
 
 import time
-from datetime import datetime
 
 from . import catversion
 
@@ -49,8 +48,6 @@ def get_readable_time(seconds: int) -> str:
 @assistant_cmd("ping", is_args=False)
 @peru_only
 async def _(event):
-    start = datetime.now()
-    end = datetime.now()
     ms = (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - catversion))
     await tgbot.send_message(
