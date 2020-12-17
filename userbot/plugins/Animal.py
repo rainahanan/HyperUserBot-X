@@ -1,4 +1,4 @@
-from userbot.utils import mellow_cmd
+from ..utils import admin_cmd
 
 M = (
     "┈┈╱▔▔▔▔▔▔▔▔▔▔▔▏\n"
@@ -12,7 +12,7 @@ M = (
 )
 
 
-@mellow.on(mellow_cmd(pattern=r"spong"))
+@bot.on(mellow_cmd(pattern=r"spong"))
 async def kek(mellow):
     await mellow.edit(M)
 
@@ -28,7 +28,7 @@ async def kek(mellow):
     )
 
 
-@mellow.on(mellow_cmd(pattern=r"spong"))
+@bot.on(mellow_cmd(pattern=r"spong"))
 async def dog(bog):
     await dog.edit(D)
 
@@ -44,7 +44,7 @@ async def dog(bog):
     )
 
 
-@mellow.on(mellow_cmd(pattern=r"pig"))
+@bot.on(mellow_cmd(pattern=r"pig"))
 async def pig(pig):
     await pig.edit(P)
 
@@ -61,7 +61,7 @@ F = (
 )
 
 
-@mellow.on(mellow_cmd(pattern=r"fox"))
+@bot.on(mellow_cmd(pattern=r"fox"))
 async def fox(fox):
     await fox.edit(F)
 
@@ -78,7 +78,7 @@ E = (
 )
 
 
-@mellow.on(mellow_cmd(pattern=r"elephant"))
+@bot.on(mellow_cmd(pattern=r"elephant"))
 async def elephant(elephant):
     await elephant.edit(E)
 
@@ -95,7 +95,7 @@ H = (
 )
 
 
-@mellow.on(mellow_cmd(pattern=r"homer"))
+@bot.on(mellow_cmd(pattern=r"homer"))
 async def homer(homer):
     await homer.edit(H)
 
@@ -116,6 +116,6 @@ S = (
 )
 
 
-@mellow.on(mellow_cmd(pattern=r"sheep"))
+@bot.on(mellow_cmd(pattern=r"sheep"))
 async def sheep(sheep):
     await sheep.edit(S)
