@@ -9,8 +9,6 @@ RUN apt-get install -y\
     bash \
     bzip2 \
     curl \
-    tesseract-ocr \
-    tesseract-ocr-eng \
     imagemagick \
     figlet \
     gcc \
