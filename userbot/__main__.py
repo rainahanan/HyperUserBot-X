@@ -43,7 +43,6 @@ for name in files:
             load_module(shortname.replace(".py", ""))
 
 
-
 if Config.ENABLE_ASSISTANTBOT == "ENABLE":
     path = "userbot/plugins/assistant/*.py"
     files = glob.glob(path)
@@ -55,8 +54,10 @@ if Config.ENABLE_ASSISTANTBOT == "ENABLE":
         LOGS.info("Friday And Assistant Bot Have Been Installed Successfully !")
     else:
         LOGS.info("Yay your userbot is officially working.!!!")
-        LOGS.info("Dhanyawad, ab .alive kar to toh pata chale ki bot zinda hai yaa mar gaya.\n"
-        "If you need help, join http://t.me//HyperUserBotXSupport")
+        LOGS.info(
+            "Dhanyawad, ab .alive kar to toh pata chale ki bot zinda hai yaa mar gaya.\n"
+            "If you need help, join http://t.me//HyperUserBotXSupport"
+        )
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
