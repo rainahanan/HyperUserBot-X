@@ -1,7 +1,7 @@
 {
-  "name": "Catuserbot",
-  "description": "A telethon userbot based on snapdragon code(xtratgbot) .Easy to use and friendly bot . Maintained by Sandeep ",
-  "logo": "https://telegra.ph/file/3d60313110c58684b31ea.jpg",
+  "name": "HyperUserBot-X",
+  "description": "A Userbot developed by TEAM  HyperUserBot-X and maintained by #TEAM_HyperUserBot-X ",
+  "logo": "https://telegra.ph/file/c92b6368929e1e44112d5.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/sandy1709/catuserbot/",
+  "repository": "https://github.com/ahirearyan2/HyperUserBot-X",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -75,11 +75,7 @@
       "description": "Required for Removing image background functionality. Get from https://www.remove.bg/",
       "value": "",
       "required": false
-    },
-    "ALIVE_PIC": {
-      "description": "the pic that to show in your alive message url.",
-      "value": "",
-      "required": false
+  
     },
     "AUTONAME": {
       "description": "for .autoname command",
@@ -112,5 +108,22 @@
     "options": {
       "version": "12"
     }
-  }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  },{
+    "url":"https://github.com/amivin/aria2-heroku.git"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+  },{
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "heroku/python"
+  }]
 }
