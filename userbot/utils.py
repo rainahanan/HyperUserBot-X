@@ -582,8 +582,11 @@ def command(**args):
         return func
 
     return decorator
-#ASSISTANT_BOT
-#THNX MIDHUN SAAR A.K.A MR.STARK SAAR
+
+
+# ASSISTANT_BOT
+# THNX MIDHUN SAAR A.K.A MR.STARK SAAR
+
 
 def assistant_cmd(add_cmd, is_args=False):
     def cmd(func):
