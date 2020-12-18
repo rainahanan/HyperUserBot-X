@@ -19,7 +19,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from userbot.wraptools import ignore_bot  # pylint:disable=E0602
-from fridaybot.wraptools import (
+from userbot.wraptools import (
     am_i_admin, # pylint:disable=E0602
     ignore_fwd, # pylint:disable=E0602
     ignore_grp, # pylint:disable=E0602
