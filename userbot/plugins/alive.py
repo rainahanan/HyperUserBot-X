@@ -32,7 +32,7 @@ async def amireallyalive(alive):
         cat_caption += f"**{EMOJI} Version** : `{catversion}`\n"
         cat_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
         cat_caption += f"**{EMOJI} Master:** {mention}\n"
-        cat_caption += f" \n"
+
         cat_caption += "[✨REPO✨](https://github.com/ahirearyan2/HyperUserBot-X) 🔹 [📜License📜](https://github.com/ahirearyan2/HyperUserBot-X/blob/master/LICENSE)"
         await alive.client.send_file(
             alive.chat_id, CAT_IMG, caption=cat_caption, reply_to=reply_to_id
