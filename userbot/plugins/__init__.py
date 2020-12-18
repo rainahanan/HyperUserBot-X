@@ -1,5 +1,4 @@
 import math
-from userbot import topfunc
 import os
 import re
 import time
@@ -8,6 +7,8 @@ import heroku3
 import requests
 import spamwatch as spam_watch
 from validators.url import url
+
+from userbot import topfunc
 
 from .. import *
 from ..Config import Config
