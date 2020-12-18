@@ -86,6 +86,8 @@ AFKREASON = None
 CMD_LIST = {}
 SUDO_LIST = {}
 # for later purposes
+CMD_LIST = {}
+CMD_HELP = {}
 INT_PLUG = ""
 LOAD_PLUG = {}
 
