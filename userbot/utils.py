@@ -784,6 +784,7 @@ def start_assistant(shortname):
         sys.modules["userbot.plugins.assistant" + shortname] = mod
         LOGS.info("Assistant Has imported " + shortname)
 
+
 def assist_cmd(pattern=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
 
