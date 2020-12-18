@@ -29,6 +29,9 @@ else:
     if os.path.exists("config.py"):
         from config import Development as Config
 
+cmdhandler = Config.COMMAND_HAND_LER
+bothandler = Config.BOT_HANDLER
+
 
 def load_module(shortname):
     if shortname.startswith("__"):
