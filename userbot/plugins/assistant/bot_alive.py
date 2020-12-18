@@ -13,8 +13,6 @@
 
 from userbot import catversion
 
-
-
 PM_IMG = "https://telegra.ph/file/22535f8051a58af113586.jpg"
 hubx_caption = "➥ **ASSISTANT IS:** `ONLINE`\n\n"
 hubx_caption += "➥ **SYSTEMS STATS**\n"
