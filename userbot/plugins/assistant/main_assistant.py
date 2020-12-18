@@ -15,7 +15,7 @@ import asyncio
 import io
 import os
 import re
-from userbot.utils import ADMIN_CMD
+
 from telethon import Button, custom, events
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
