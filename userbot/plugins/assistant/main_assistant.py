@@ -20,6 +20,7 @@ from telethon import Button, custom, events
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
 
+from userbot.utils import admin_cmd
 from userbot import bot
 from userbot.Config import Config
 from userbot.plugins.sql_helper.blacklist_assistant import (
