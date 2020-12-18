@@ -49,6 +49,7 @@ async def amireallyalive(alive):
             f"**{EMOJI} Version** : `{catversion}`\n"
             f"**{EMOJI} My Master** : {mention} \n"
             f"**{EMOJI} Uptime :** `{uptime}\n`"
+
             "[✨REPO✨](https://github.com/ahirearyan2/HyperUserBot-X) 🔹 [📜License📜](https://github.com/ahirearyan2/HyperUserBot-X/blob/master/LICENSE)",
         )
 
