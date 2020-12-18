@@ -36,7 +36,7 @@ from userbot.plugins.sql_helper.idadder_sql import (
 from userbot.utils import admin_cmd
 
 
-@admin_cmd("start")
+@assist_cmd("start", is_args=False))
 async def start(event):
     aryanbot = await tgbot.get_me()
     bot_id = aryanbot.first_name
