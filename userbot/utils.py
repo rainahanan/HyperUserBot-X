@@ -822,6 +822,4 @@ def admin_cmd(pattern=None, **args):
         args["allow_edited_updates"]
         del args["allow_edited_updates"]
 
-    # check if the plugin should listen for outgoing 'messages'
-
-    return events.NewMessage(**args)
+   
