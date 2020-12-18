@@ -15,7 +15,7 @@
 import time
 from datetime import datetime
 
-from . import catversion
+from userbot import catversion
 
 
 def get_readable_time(seconds: int) -> str:
