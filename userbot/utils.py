@@ -755,8 +755,8 @@ def start_assistant(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        sedprint.info("Starting Your Assistant Bot.")
-        sedprint.info("Assistant Sucessfully imported " + shortname)
+        LOGS.info("Starting Your Assistant Bot.")
+        LOGS.info("Assistant Sucessfully imported " + shortname)
     else:
         import importlib
         import sys
@@ -780,4 +780,4 @@ def start_assistant(shortname):
         mod.only_pvt = only_pvt()
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.assistant" + shortname] = mod
-        sedprint.info("Assistant Has imported " + shortname)
+        LOGS.info("Assistant Has imported " + shortname)
