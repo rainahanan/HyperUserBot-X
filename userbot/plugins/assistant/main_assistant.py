@@ -242,8 +242,6 @@ async def aryanisnoob(event):
 async def aryanisnoob(event):
     if event.sender_id == bot.uid:
         msg = await event.get_reply_message()
-        msg.id
-        event.raw_text
         user_id, reply_message_id = his_userid(msg.id)
     if not is_he_added(user_id):
         await event.reply("Not Even. Blacklisted 🤦🚶")
