@@ -32,7 +32,7 @@ from userbot.plugins.sql_helper.idadder_sql import (
     get_all_users,
 )
 
-from . import bot
+from userbot import bot
 
 
 @admin_cmd("start", is_args=False)
