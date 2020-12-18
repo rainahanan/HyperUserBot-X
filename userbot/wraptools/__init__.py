@@ -16,8 +16,8 @@ import functools
 import re
 
 from telethon import events
-from heroku_config import Var
 
+from heroku_config import Var
 from userbot import bot
 from userbot.Config import Config
 
