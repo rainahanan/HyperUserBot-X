@@ -213,6 +213,7 @@ class Config((object)):
     )
     BOT_HANDLER = os.environ.get("BOT_HANDLER", "^/")
 
+
 class Production(Config):
     LOGGER = False
 
