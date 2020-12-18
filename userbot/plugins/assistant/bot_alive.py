@@ -12,9 +12,9 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from userbot import catversion
-from userbot.Config import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "catuser"
+
+
 PM_IMG = "https://telegra.ph/file/22535f8051a58af113586.jpg"
 hubx_caption = "➥ **ASSISTANT IS:** `ONLINE`\n\n"
 hubx_caption += "➥ **SYSTEMS STATS**\n"
@@ -23,7 +23,6 @@ hubx_caption += "➥ **Python:** `3.7.4` \n"
 hubx_caption += "➥ **Database Status:**  `Functional`\n"
 hubx_caption += "➥ **Current Branch** : `main`\n"
 hubx_caption += f"➥ **Version** : `{catversion}`\n"
-hubx_caption += f"➥ **My Boss** : {DEFAULTUSER} \n"
 hubx_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
 hubx_caption += "➥ **License** : [GNU General Public License v3.0](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n"
 
