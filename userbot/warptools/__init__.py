@@ -16,10 +16,10 @@ import functools
 import re
 
 from telethon import events
+from var import Var
 
 from userbot import bot
 from userbot.Config import Config
-from var import Var
 
 
 def ignore_fwd():
