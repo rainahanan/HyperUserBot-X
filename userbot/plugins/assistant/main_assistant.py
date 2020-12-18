@@ -136,7 +136,6 @@ async def all_messages_catcher(event):
         return
     else:
         await event.get_sender()
-        event.chat_id
         sed = await event.forward_to(bot.uid)
         # Add User To Database ,Later For Broadcast Purpose
         # (C) @SpecHide
