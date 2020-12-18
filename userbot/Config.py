@@ -211,7 +211,7 @@ class Config((object)):
         "ASSISTANT_START_PIC",
         "https://www.logolynx.com/images/logolynx/72/7257d2ac93b97c8a2c7308266052df13.png",
     )
-
+    BOT_HANDLER = os.environ.get("BOT_HANDLER", "^/")
 
 class Production(Config):
     LOGGER = False
