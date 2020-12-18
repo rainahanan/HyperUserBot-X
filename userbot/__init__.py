@@ -11,6 +11,7 @@ from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
+from .function import userbotfunction as topfunc
 from .Config import Config
 
 StartTime = time.time()
