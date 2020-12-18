@@ -217,6 +217,7 @@ def sudo_cmd(pattern=None, command=None, **args):
     # check if the plugin should listen for outgoing 'messages'
     return events.NewMessage(**args)
 
+
 def assist_cmd(pattern=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
 
@@ -259,6 +260,7 @@ def assist_cmd(pattern=None, **args):
     # check if the plugin should listen for outgoing 'messages'
 
     return events.NewMessage(**args)
+
 
 # https://t.me/c/1220993104/623253
 # https://docs.telethon.dev/en/latest/misc/changelog.html#breaking-changes
@@ -825,5 +827,3 @@ def start_assistant(shortname):
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.assistant" + shortname] = mod
         LOGS.info("Assistant Has imported " + shortname)
-
-
