@@ -12,7 +12,6 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 from .Config import Config
-from .function import userbotfunction as topfunc
 
 StartTime = time.time()
 catversion = "2.9.4"
@@ -86,8 +85,6 @@ AFKREASON = None
 CMD_LIST = {}
 SUDO_LIST = {}
 # for later purposes
-CMD_LIST = {}
-CMD_HELP = {}
 INT_PLUG = ""
 LOAD_PLUG = {}
 
