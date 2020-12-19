@@ -1,6 +1,5 @@
 import asyncio
 import datetime
-import functools
 import importlib
 import inspect
 import logging
@@ -18,12 +17,6 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from userbot.wraptools import am_i_admin  # pylint:disable=E0602; pylint:disable=E0602
-from userbot.wraptools import ignore_bot  # pylint:disable=E0602
-from userbot.wraptools import ignore_fwd  # pylint:disable=E0602
-from userbot.wraptools import ignore_grp  # pylint:disable=E0602
-from userbot.wraptools import ignore_pm  # pylint:disable=E0602
-
 from . import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
 from .helpers.exceptions import CancelProcess
 
@@ -34,9 +27,6 @@ if ENV:
 else:
     if os.path.exists("config.py"):
         from config import Development as Config
-
-cmdhandler = Config.COMMAND_HAND_LER
-bothandler = Config.BOT_HANDLER
 
 
 def load_module(shortname):
@@ -222,50 +212,6 @@ def sudo_cmd(pattern=None, command=None, **args):
     return events.NewMessage(**args)
 
 
-def assist_cmd(pattern=None, **args):
-    args["func"] = lambda e: e.via_bot_id is None
-
-    stack = inspect.stack()
-    previous_stack_frame = stack[1]
-    file_test = Path(previous_stack_frame.filename)
-    file_test = file_test.stem.replace(".py", "")
-    allow_sudo = args.get("allow_sudo", False)
-
-    # get the pattern from the decorator
-    if pattern is not None:
-        if pattern.startswith("\#"):
-            # special fix for snip.py
-            args["pattern"] = re.compile(pattern)
-        else:
-            args["pattern"] = re.compile(cmdhandler + pattern)
-            cmd = cmdhandler + pattern
-            try:
-                CMD_LIST[file_test].append(cmd)
-            except:
-                CMD_LIST.update({file_test: [cmd]})
-
-    args["outgoing"] = True
-    # should this command be available for other users?
-    if allow_sudo:
-        args["from_users"] = list(Config.SUDO_USERS)
-        # Mutually exclusive with outgoing (can only set one of either).
-        args["incoming"] = True
-        del args["allow_sudo"]
-
-    # error handling condition check
-    elif "incoming" in args and not args["incoming"]:
-        args["outgoing"] = True
-
-    # add blacklist chats, UB should not respond in these chats
-    if "allow_edited_updates" in args and args["allow_edited_updates"]:
-        args["allow_edited_updates"]
-        del args["allow_edited_updates"]
-
-    # check if the plugin should listen for outgoing 'messages'
-
-    return events.NewMessage(**args)
-
-
 # https://t.me/c/1220993104/623253
 # https://docs.telethon.dev/en/latest/misc/changelog.html#breaking-changes
 async def edit_or_reply(
@@ -365,7 +311,7 @@ def errors_handler(func):
             new = {"error": str(sys.exc_info()[1]), "date": datetime.datetime.now()}
 
             text = "**USERBOT CRASH REPORT**\n\n"
-            link = "[here](https://t.me//HyperUserBotXSupport)"
+            link = "[here](https://t.me/catuserbot_support)"
             text += "If you wanna you can report it"
             text += f"- just forward this message {link}.\n"
             text += "Nothing is logged except the fact of error and date\n"
@@ -636,198 +582,3 @@ def command(**args):
         return func
 
     return decorator
-
-
-# ASSISTANT_BOT
-# THNX MIDHUN SAAR A.K.A MR.STARK SAAR
-
-
-def assistant_cmd(add_cmd, is_args=False):
-    def cmd(func):
-        serena = bot.tgbot
-        if is_args:
-            pattern = bothandler + add_cmd + "(?: |$)(.*)"
-        elif is_args == "stark":
-            pattern = bothandler + add_cmd + " (.*)"
-        elif is_args == "snips":
-            pattern = bothandler + add_cmd + " (\S+)"
-        else:
-            pattern = bothandler + add_cmd + "$"
-        serena.add_event_handler(
-            func, events.NewMessage(incoming=True, pattern=pattern)
-        )
-
-    return cmd
-
-
-def is_admin():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            serena = bot.tgbot
-            sed = await serena.get_permissions(event.chat_id, event.sender_id)
-            user = event.sender_id
-            kek = bot.uid
-            if sed.is_admin:
-                await func(event)
-            if event.sender_id == kek:
-                pass
-            elif not user:
-                pass
-            if not sed.is_admin:
-                await event.reply("Only Admins Can Use it.")
-
-        return wrapper
-
-    return decorator
-
-
-def is_bot_admin():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            serena = bot.tgbot
-            pep = await serena.get_me()
-            sed = await serena.get_permissions(event.chat_id, pep)
-            if sed.is_admin:
-                await func(event)
-            else:
-                await event.reply("I Must Be Admin To Do This.")
-
-        return wrapper
-
-    return decorator
-
-
-def only_pro():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            kek = list(Config.SUDO_USERS)
-            mm = bot.uid
-            if event.sender_id == mm:
-                await func(event)
-            elif event.sender_id == kek:
-                await func(event)
-            else:
-                await event.reply("Only Owners, Sudo Users Can Use This Command.")
-
-        return wrapper
-
-    return decorator
-
-
-def god_only():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            moms = bot.uid
-            if event.sender_id == moms:
-                await func(event)
-            else:
-                pass
-
-        return wrapper
-
-    return decorator
-
-
-def only_groups():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            if event.is_group:
-                await func(event)
-            else:
-                await event.reply("This Command Only Works On Groups.")
-
-        return wrapper
-
-    return decorator
-
-
-def only_group():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            if event.is_group:
-                await func(event)
-            else:
-                pass
-
-        return wrapper
-
-    return decorator
-
-
-def peru_only():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            kek = list(Config.SUDO_USERS)
-            mm = bot.uid
-            if event.sender_id == mm:
-                await func(event)
-            elif event.sender_id == kek:
-                await func(event)
-            else:
-                pass
-
-        return wrapper
-
-    return decorator
-
-
-def only_pvt():
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(event):
-            if event.is_group:
-                pass
-            else:
-                await func(event)
-
-        return wrapper
-
-    return decorator
-
-
-def start_assistant(shortname):
-    if shortname.startswith("__"):
-        pass
-    elif shortname.endswith("_"):
-        import importlib
-        import sys
-        from pathlib import Path
-
-        path = Path(f"userbot/plugins/assistant/{shortname}.py")
-        name = "userbot.plugins.assistant.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        LOGS.info("Starting Your Assistant Bot.")
-        LOGS.info("Assistant Sucessfully imported " + shortname)
-    else:
-        import importlib
-        import sys
-        from pathlib import Path
-
-        path = Path(f"userbot/plugins/assistant/{shortname}.py")
-        name = "userbot.plugins.assistant.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        mod.tgbot = bot.tgbot
-        mod.serena = bot.tgbot
-        mod.assistant_cmd = assistant_cmd
-        mod.god_only = god_only()
-        mod.only_groups = only_groups()
-        mod.only_pro = only_pro()
-        mod.pro_only = only_pro()
-        mod.only_group = only_group()
-        mod.is_bot_admin = is_bot_admin()
-        mod.is_admin = is_admin()
-        mod.peru_only = peru_only()
-        mod.only_pvt = only_pvt()
-        spec.loader.exec_module(mod)
-        sys.modules["userbot.plugins.assistant" + shortname] = mod
-        LOGS.info("Assistant Has imported " + shortname)
