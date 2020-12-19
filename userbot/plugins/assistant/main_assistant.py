@@ -35,11 +35,11 @@ from userbot.plugins.sql_helper.idadder_sql import (
 )
 
 
-@assist_cmd("start", args=False)
+@assistant_cmd("start", is_args=False)
 async def start(event):
-    aryanbot = await tgbot.get_me()
-    bot_id = aryanbot.first_name
-    bot_username = aryanbot.username
+    starkbot = await tgbot.get_me()
+    bot_id = starkbot.first_name
+    bot_username = starkbot.username
     replied_user = await event.client(GetFullUserRequest(event.sender_id))
     firstname = replied_user.user.first_name
     devlop = await bot.get_me()
@@ -72,8 +72,8 @@ async def start(event):
             caption=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.inline("Deploy your HyperUserBot-X", data="deploy")],
-                [Button.url("Help Me ❓", "t.me/HyperUserBotXSupport")],
+                [custom.Button.inline("Deploy your Friday 🇮🇳", data="deploy")],
+                [Button.url("Help Me ❓", "t.me/Fridayot")],
             ],
         )
         if os.path.exists(mypic):
@@ -103,8 +103,8 @@ async def users(event):
         await event.delete()
         total_users = get_all_users()
         users_list = "List Of Total Users In Bot. \n\n"
-        for aryaned in total_users:
-            users_list += ("==> {} \n").format(int(aryaned.chat_id))
+        for starked in total_users:
+            users_list += ("==> {} \n").format(int(starked.chat_id))
         with io.BytesIO(str.encode(users_list)) as tedt_file:
             tedt_file.name = "userlist.txt"
             await tgbot.send_file(
@@ -185,14 +185,14 @@ async def sedlyfsir(event):
     elif msgtobroadcast == " ":
         await event.reply("`Wait. What? Broadcast None?`")
         return
-    for aryancast in userstobc:
+    for starkcast in userstobc:
         try:
             sent_count += 1
             await tgbot.send_message(
-                int(aryancast.chat_id),
+                int(starkcast.chat_id),
                 "**Hey, You Have Received A New Broadcast Message**",
             )
-            await tgbot.send_message(int(aryancast.chat_id), msgtobroadcast)
+            await tgbot.send_message(int(starkcast.chat_id), msgtobroadcast)
             await asyncio.sleep(0.2)
         except Exception as e:
             hmmok += f"Errors : {e} \n"
@@ -205,27 +205,25 @@ async def sedlyfsir(event):
 
 @assistant_cmd("stats", is_args=False)
 @peru_only
-async def aryanisnoob(event):
-    aryanisnoob = get_all_users()
+async def starkisnoob(event):
+    starkisnoob = get_all_users()
     await event.reply(
-        f"**Stats Of Your Bot** \nTotal Users In Bot => {len(aryanisnoob)}"
+        f"**Stats Of Your Bot** \nTotal Users In Bot => {len(starkisnoob)}"
     )
 
 
 @assistant_cmd("help", is_args=False)
 @peru_only
-async def aryanislub(event):
+async def starkislub(event):
     grabonx = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot"
     await event.reply(grabonx)
 
 
 @assistant_cmd("block", is_args=False)
 @god_only
-async def aryanisnoob(event):
+async def starkisnoob(event):
     if event.sender_id == bot.uid:
         msg = await event.get_reply_message()
-        msg.id
-        event.raw_text
         user_id, reply_message_id = his_userid(msg.id)
     if is_he_added(user_id):
         await event.reply("Already Blacklisted")
@@ -239,9 +237,11 @@ async def aryanisnoob(event):
 
 @assistant_cmd("unblock", is_args=False)
 @god_only
-async def aryanisnoob(event):
+async def starkisnoob(event):
     if event.sender_id == bot.uid:
         msg = await event.get_reply_message()
+        msg.id
+        event.raw_text
         user_id, reply_message_id = his_userid(msg.id)
     if not is_he_added(user_id):
         await event.reply("Not Even. Blacklisted 🤦🚶")
