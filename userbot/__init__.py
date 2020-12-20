@@ -12,7 +12,6 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 
 from .Config import Config
-
 from .function import hubxfunction as topfunc
 
 StartTime = time.time()
