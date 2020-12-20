@@ -3,7 +3,6 @@ from telethon import events
 from userbot import bot
 from userbot.plugins import catversion
 
-
 PM_IMG = "https://telegra.ph/file/e6223f1abf7720c4938f3.jpg"
 pm_caption = "➥ **ASSISTANT IS:** `ONLINE`\n\n"
 pm_caption += "➥ **SYSTEMS STATS**\n"
