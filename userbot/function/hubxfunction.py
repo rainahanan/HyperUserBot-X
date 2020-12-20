@@ -1,9 +1,5 @@
 # Copyright (C) By @StarkGang And @ZeltraxRockz
 # Powered By @Nemo_Projects
-# Copyright (C) By @UNKNOWN_MEMEBER_69
-# IMPORTED TO HYPERUSERBOT-X FROM FRIDAY USER BOT
-# THNX MR.STARK SIR AKA MIDHUN SIR
-# CREDITS GOES TO RESPECTED OWNERS
 import random
 import string
 

@@ -8,8 +8,6 @@ import requests
 import spamwatch as spam_watch
 from validators.url import url
 
-from userbot import topfunc
-
 from .. import *
 from ..Config import Config
 

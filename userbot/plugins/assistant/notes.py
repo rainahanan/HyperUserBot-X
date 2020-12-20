@@ -1,13 +1,15 @@
 from telethon import events, utils
 from telethon.tl import types
 
-from userbot.Config import Config
 from userbot.plugins.sql_helper.snips_sql import (
     add_snip,
     get_all_snips,
     get_snips,
     remove_snip,
 )
+from userbot.ubconfig import Config
+
+from . import bot
 
 TYPE_TEXT = 0
 TYPE_PHOTO = 1
@@ -41,8 +43,9 @@ async def on_snip(event):
         )
 
 
-@assistant_cmd("addnote", is_args=True)
-@pro_only
+@tgbot.on(
+    events.NewMessage(pattern="^/addnote ?(.*)", func=lambda e: e.sender_id == bot.uid)
+)
 async def _(event):
     name = event.pattern_match.group(1)
     msg = await event.get_reply_message()
@@ -75,8 +78,7 @@ async def _(event):
         await event.reply("Reply to a message with `snips keyword` to save the snip")
 
 
-@assistant_cmd("notes", is_args=True)
-@pro_only
+@tgbot.on(events.NewMessage(pattern="^/notes"))
 async def on_snip_list(event):
     all_snips = get_all_snips()
     OUT_STR = "Available Snips:\n"
@@ -100,8 +102,9 @@ async def on_snip_list(event):
         await event.reply(OUT_STR)
 
 
-@assistant_cmd("rmnote", is_args="snips")
-@pro_only
+@tgbot.on(
+    events.NewMessage(pattern="^/rmnote (\S+)", func=lambda e: e.sender_id == bot.uid)
+)
 async def on_snip_delete(event):
     name = event.pattern_match.group(1)
     remove_snip(name)
