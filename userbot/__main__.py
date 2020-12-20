@@ -11,6 +11,7 @@ from .utils import load_module, start_assistant
 
 LOAD_ASSISTANT = os.environ.get("LOAD_ASSISTANT", True)
 
+
 async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me()
