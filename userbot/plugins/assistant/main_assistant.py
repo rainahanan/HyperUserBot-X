@@ -18,7 +18,6 @@ import re
 from telethon import Button, custom, events
 from telethon.tl.functions.users import GetFullUserRequest
 
-from . import bot
 from userbot.plugins.sql_helper.blacklist_assistant import (
     add_nibba_in_db,
     is_he_added,
@@ -30,6 +29,8 @@ from userbot.plugins.sql_helper.idadder_sql import (
     already_added,
     get_all_users,
 )
+
+from . import bot
 
 
 @tgbot.on(events.NewMessage(pattern="^/start"))

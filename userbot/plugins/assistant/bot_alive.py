@@ -1,7 +1,8 @@
 from telethon import events
 
-from . import ALIVE_NAME, bot
 from userbot.plugins import catversion
+
+from . import ALIVE_NAME, bot
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = "https://telegra.ph/file/e6223f1abf7720c4938f3.jpg"

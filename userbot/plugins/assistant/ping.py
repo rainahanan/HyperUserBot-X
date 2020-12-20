@@ -9,7 +9,7 @@ from datetime import datetime
 
 from telethon import events
 
-from userbot import catversion, bot
+from userbot import bot, catversion
 
 
 def get_readable_time(seconds: int) -> str:

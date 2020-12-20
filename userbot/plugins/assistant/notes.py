@@ -1,14 +1,15 @@
 from telethon import events, utils
 from telethon.tl import types
 
-from . import bot
-from userbot.ubconfig import Config
 from userbot.plugins.sql_helper.snips_sql import (
     add_snip,
     get_all_snips,
     get_snips,
     remove_snip,
 )
+from userbot.ubconfig import Config
+
+from . import bot
 
 TYPE_TEXT = 0
 TYPE_PHOTO = 1

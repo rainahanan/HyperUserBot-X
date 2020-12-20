@@ -18,8 +18,9 @@ from telethon import events
 from telethon.errors.rpcerrorlist import MessageDeleteForbiddenError
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from . import bot
 from userbot.utils import bot
+
+from . import bot
 
 OWNER_ID = bot.uid
 # Check if user has admin rights
