@@ -13,6 +13,8 @@ from telethon.sessions import StringSession
 
 from .Config import Config
 
+from .function import hubxfunction as topfunc
+
 StartTime = time.time()
 catversion = "2.9.4"
 
