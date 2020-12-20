@@ -583,6 +583,7 @@ def command(**args):
 
     return decorator
 
+
 # Assistant
 def start_assistant(shortname):
     if shortname.startswith("__"):
