@@ -7,8 +7,9 @@ from telethon import TelegramClient
 
 from . import LOGS, bot
 from .Config import Config
-from .utils import load_module
+from .utils import load_module, start_assistant
 
+LOAD_ASSISTANT = os.environ.get("LOAD_ASSISTANT", True)
 
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -47,6 +48,19 @@ LOGS.info(
     "Congratulation, now type .alive to see message if bot is live\n"
     "If you need assistance, head to https://t.me/catuserbot_support"
 )
+
+if LOAD_ASSISTANT == True:
+    path = "userbot/plugins/assistant/*.py"
+    files = glob.glob(path)
+    for name in files:
+        with open(name) as f:
+            path1 = Path(f.name)
+            shortname = path1.stem
+            start_assistant(shortname.replace(".py", ""))
+else:
+    print("Assitant is Not Loading As U Have Disabled")
+
+print("JARVIS AI AND YOUR ASSISTANT is Active Enjoy Join @JarvisOT For Updates.")
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
