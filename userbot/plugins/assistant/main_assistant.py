@@ -30,7 +30,7 @@ from userbot.plugins.sql_helper.idadder_sql import (
     get_all_users,
 )
 
-from . import bot
+from userbot import bot
 
 
 @tgbot.on(events.NewMessage(pattern="^/start"))
