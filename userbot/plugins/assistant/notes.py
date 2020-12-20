@@ -7,7 +7,7 @@ from userbot.plugins.sql_helper.snips_sql import (
     get_snips,
     remove_snip,
 )
-from userbot.ubconfig import Config
+from userbot.Config import Config
 
 from . import bot
 
