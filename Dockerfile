@@ -1,7 +1,7 @@
 FROM ahirearyan2/HYPERUSERBOT-X:latest
 
 #clonning repo 
-RUN git clone -b assistant https://github.com/ahirearyan2/HyperUserBot-X.git /root/userbot
+RUN git clone https://github.com/ahirearyan2/HyperUserBot-X.git /root/userbot
 #working directory 
 WORKDIR /root/userbot
 
