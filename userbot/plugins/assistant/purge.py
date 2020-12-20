@@ -20,7 +20,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 from userbot.utils import bot
 
-from . import bot
+from userbot import bot
 
 OWNER_ID = bot.uid
 # Check if user has admin rights
