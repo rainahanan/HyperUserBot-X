@@ -1,9 +1,9 @@
 from telethon import events
 
-from userbot import ALIVE_NAME, bot
+from userbot import bot
 from userbot.plugins import catversion
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
+
 PM_IMG = "https://telegra.ph/file/e6223f1abf7720c4938f3.jpg"
 pm_caption = "➥ **ASSISTANT IS:** `ONLINE`\n\n"
 pm_caption += "➥ **SYSTEMS STATS**\n"
@@ -12,7 +12,7 @@ pm_caption += "➥ **Python:** `3.7.4` \n"
 pm_caption += "➥ **Database Status:**  `Functional`\n"
 pm_caption += "➥ **Current Branch** : `master`\n"
 pm_caption += f"➥ **Version** : `{catversion}`\n"
-pm_caption += f"➥ **My Boss** : {DEFAULTUSER} \n"
+pm_caption += f"➥ **My Boss** : \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
 pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/Jarvis-Works/JarvisUserbot/blob/master/LICENSE)\n"
 pm_caption += "➥ **Copyright** : By [JARVIS WORKS](GitHub.com/Jarvis-Works)\n"
