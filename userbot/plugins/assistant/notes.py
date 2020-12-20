@@ -9,7 +9,7 @@ from userbot.plugins.sql_helper.snips_sql import (
     remove_snip,
 )
 
-from . import bot
+from userbot import bot
 
 TYPE_TEXT = 0
 TYPE_PHOTO = 1
