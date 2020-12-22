@@ -17,6 +17,8 @@ from .function import hubxfunction as topfunc
 StartTime = time.time()
 catversion = "2.9.4"
 
+Lastupdate = time.time()
+
 if Config.STRING_SESSION:
     session_name = str(Config.STRING_SESSION)
     if session_name.endswith("="):
