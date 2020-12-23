@@ -7,7 +7,9 @@ from . import ALIVE_NAME, StartTime, catdef, catversion, mention, reply_id
 
 DEFAULTUSER = ALIVE_NAME or "cat"
 CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ HyperUserBot-X IS RUNNING SUCCESSFULLY ✮"
+CUSTOM_ALIVE_TEXT = (
+    Config.CUSTOM_ALIVE_TEXT or "✮ HyperUserBot-X IS RUNNING SUCCESSFULLY ✮"
+)
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  ✥ "
 
 
