@@ -25,7 +25,6 @@ from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 from telethon import events
 
 from . import (
-    BOTLOG_CHATID,
     G_DRIVE_CLIENT_ID,
     G_DRIVE_CLIENT_SECRET,
     G_DRIVE_DATA,
