@@ -206,7 +206,7 @@ class Config(object):
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
     CHANGE_TIME = int(os.environ.get("CHANGE_TIME", 60))
 
-# ASSISTANT
+    # ASSISTANT
     ASSISTANT_LOG = int(os.environ.get("ASSISTANT_LOG", False))
     ENABLE_ASSISTANTBOT = os.environ.get("ENABLE_ASSISTANTBOT", "ENABLE")
     ASSISTANT_START_PIC = os.environ.get(
@@ -214,6 +214,7 @@ class Config(object):
         "https://www.logolynx.com/images/logolynx/72/7257d2ac93b97c8a2c7308266052df13.png",
     )
     BOT_HANDLER = os.environ.get("BOT_HANDLER", "^/")
+
 
 class Production(Config):
     LOGGER = False

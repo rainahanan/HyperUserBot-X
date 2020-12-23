@@ -10,7 +10,6 @@ import time
 import traceback
 from pathlib import Path
 from time import gmtime, strftime
-import os
 
 from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
@@ -491,6 +490,7 @@ def command(**args):
         return func
 
     return decorator
+
 
 # Assistant
 def start_assistant(shortname):
