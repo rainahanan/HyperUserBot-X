@@ -9,13 +9,13 @@ pm_caption += "➥ **SYSTEMS STATS**\n"
 pm_caption += "➥ **Telethon Version:** `1.15.0` \n"
 pm_caption += "➥ **Python:** `3.7.4` \n"
 pm_caption += "➥ **Database Status:**  `Functional`\n"
-pm_caption += "➥ **Current Branch** : `master`\n"
+pm_caption += "➥ **Current Branch** : `main`\n"
 pm_caption += f"➥ **Version** : `{catversion}`\n"
 pm_caption += f"➥ **My Boss** : \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
-pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/Jarvis-Works/JarvisUserbot/blob/master/LICENSE)\n"
-pm_caption += "➥ **Copyright** : By [JARVIS WORKS](GitHub.com/Jarvis-Works)\n"
-pm_caption += "[Assistant By JARVIS 🇮🇳](https://telegra.ph/FRIDAY-06-15)"
+pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/ahirearyan2/HyperUserBot-X/blob/main/LICENSE)\n"
+pm_caption += "➥ **Copyright** : By [TEAM HyperUserBot-X](GitHub.com/ahirearyan2/HyperUserBot-X)\n"
+pm_caption += "[Assistant By HyperUserBot-X ](https://telegra.ph/FRIDAY-06-15)"
 
 # only Owner Can Use it
 @tgbot.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))
