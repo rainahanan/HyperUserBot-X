@@ -1,5 +1,4 @@
 import glob
-import os
 from pathlib import Path
 from sys import argv
 
@@ -11,7 +10,6 @@ from .Config import Config
 from .utils import load_module, start_assistant
 
 LOAD_ASSISTANT = os.environ.get("LOAD_ASSISTANT", True)
-
 
 async def add_bot(bot_token):
     await bot.start(bot_token)
@@ -62,7 +60,14 @@ if LOAD_ASSISTANT == True:
 else:
     print("Assitant is Not Loading As U Have Disabled")
 
-print("JARVIS AI AND YOUR ASSISTANT is Active Enjoy Join @JarvisOT For Updates.")
+print("HyperUserBot-X AND YOUR ASSISTANT is Active Enjoy Join @JarvisOT For Updates.")
+
+if len(argv) not in (1, 3, 4):
+    bot.disconnect()
+else:
+    bot.tgbot = None
+    bot.run_until_disconnected()
+
 
 if len(argv) not in (1, 3, 4):
     bot.disconnect()

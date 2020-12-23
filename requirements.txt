@@ -1,4 +1,6 @@
-telethon==1.17.5
+telethon
+setuptools
+wheel
 aiofiles
 aiohttp
 asyncurban
@@ -22,8 +24,7 @@ glitch_this
 google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
-google_trans_new
-googletrans
+googletrans==3.1.0a0
 gsearch
 gtts
 hachoir
@@ -68,4 +69,3 @@ vcsi
 wand
 wikipedia
 youtube_dl > 2020.11.12
-python-magic
