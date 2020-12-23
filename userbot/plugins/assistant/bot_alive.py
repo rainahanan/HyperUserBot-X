@@ -15,7 +15,7 @@ pm_caption += f"➥ **My Boss** : \n"
 pm_caption += "➥ **Heroku Database** : `AWS - Working Properly`\n\n"
 pm_caption += "➥ **License** : [GNU General Public License v3.0](github.com/ahirearyan2/HyperUserBot-X/blob/main/LICENSE)\n"
 pm_caption += "➥ **Copyright** : By [TEAM HyperUserBot-X](GitHub.com/ahirearyan2/HyperUserBot-X)\n"
-pm_caption += "[Assistant By HyperUserBot-X ](https://telegra.ph/FRIDAY-06-15)"
+pm_caption += "[Assistant By HyperUserBot-X ]"
 
 # only Owner Can Use it
 @tgbot.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))
