@@ -97,7 +97,7 @@ GDRIVE_ID = re.compile(
 @bot.on(sudo_cmd(pattern="gauth$", command="gauth", allow_sudo=True))
 async def generate_credentials(gdrive):
     """ - Only generate once for long run - """
-    if not BOTLOG:
+    if not BOTLOG_CHATID:
         await edit_delete(
             gdrive,
             "for authencation you need to set PRIVATE_GROUP_BOT_API_ID in heroku",
