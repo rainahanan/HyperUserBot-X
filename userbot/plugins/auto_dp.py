@@ -249,7 +249,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)  # Edit this to your required needs
+        await asyncio.sleep(120)  # Edit this to your required needs
 
 
 @bot.on(admin_cmd(pattern="thordp$"))
@@ -265,7 +265,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)  # Edit this to your required needs
+        await asyncio.sleep(120)  # Edit this to your required needs
 
 
 @bot.on(admin_cmd(pattern="actressdp$"))
@@ -281,7 +281,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)
+        await asyncio.sleep(120)
 
 
 @bot.on(admin_cmd(pattern="animedp$"))
@@ -297,7 +297,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)
+        await asyncio.sleep(120)
 
 
 @bot.on(admin_cmd(pattern="avengersdp$"))
@@ -313,7 +313,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)
+        await asyncio.sleep(120)
 
 
 @bot.on(admin_cmd(pattern="gamerdp$"))
@@ -329,7 +329,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)
+        await asyncio.sleep(120)
 
 
 @bot.on(admin_cmd(pattern="hackerdp$"))
@@ -345,7 +345,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)
+        await asyncio.sleep(120)
 
 
 @bot.on(admin_cmd(pattern="spacedp$"))
@@ -361,7 +361,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)
+        await asyncio.sleep(120)
 
 
 @bot.on(admin_cmd(pattern="wallpapers$"))
@@ -377,7 +377,7 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)
+        await asyncio.sleep(120)
 
 
 CMD_HELP.update(
