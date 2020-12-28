@@ -4,9 +4,6 @@ from userbot.plugins import catversion
 
 from userbot import bot
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "HyperUser"
-
-
 PM_IMG = "https://telegra.ph/file/c92b6368929e1e44112d5.jpg"
 pm_caption = "✥ **ASSISTANT IS:** `ONLINE`\n\n"
 pm_caption += "✥ **SYSTEMS STATS**\n"
