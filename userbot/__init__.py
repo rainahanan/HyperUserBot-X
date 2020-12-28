@@ -3,9 +3,9 @@ import sys
 import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
-import telegram.ext as tg
 
 import heroku3
+import telegram.ext as tg
 from dotenv import load_dotenv
 from requests import get
 from telethon import TelegramClient
