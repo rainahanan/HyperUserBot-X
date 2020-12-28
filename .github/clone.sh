@@ -15,7 +15,7 @@ else
     rm -rf userbot
     rm -rf .github
     rm -rf requirements.txt
-    git clone https://github.com/ahirearyan2/HyperUserBot-X HUB
+    git clone -b mb https://github.com/ahirearyan2/HyperUserBot-X HUB
     mv HUB/userbot .
     mv HUB/.github . 
     mv HUB/.git .
