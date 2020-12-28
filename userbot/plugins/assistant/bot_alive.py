@@ -1,6 +1,6 @@
 from telethon import events
 
-from userbot import bot, ALIVE_NAME
+from userbot import ALIVE_NAME, bot
 from userbot.plugins import catversion
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "HyperUser"
