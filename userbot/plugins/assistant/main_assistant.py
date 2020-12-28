@@ -65,8 +65,8 @@ async def start(event):
             message=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.inline("Deploy your JARVIS 🇮🇳", data="deploy")],
-                [Button.url("Help Me ❓", "t.me/JarvisOT")],
+                [custom.Button.inline("Deploy your HyperUserBot-X ", data="deploy")],
+                [Button.url("Help Me ❓", "t.me/HyperUserBotXSupport")],
             ],
         )
 
@@ -80,10 +80,9 @@ async def help(event):
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
             event.chat_id,
-            message="You Can Deploy JARVIS In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            message="You Can Deploy HyperUserBot-X In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
             buttons=[
-                [Button.url("Deploy Tutorial 📺", "https://youtu.be/Qsx3LZzsh7s")],
-                [Button.url("Need Help ❓", "t.me/JarvisSupportOT")],
+                [Button.url("Need Help ❓", "t.me/HyperUserBotXSupport")],
             ],
         )
 
