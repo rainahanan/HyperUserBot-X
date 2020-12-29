@@ -1,3 +1,4 @@
+import base64
 from telethon import events, functions, types
 from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
