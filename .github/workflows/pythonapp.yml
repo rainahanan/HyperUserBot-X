@@ -1,4 +1,4 @@
-name: catChecker
+name: HyperChecker
 
 on: [push, pull_request]
 
